@@ -131,14 +131,7 @@
      <name>yarn.scheduler.capacity.node-locality-delay</name>
      <value>400</value>
    </property>
-   <!--
-   <property>
-     <name>yarn.application.classpath</name>
-     <value></value>
-   </property>
 
-     <value>/home/vicente/sandbox/lib/java/json-simple-1.1.jar,/home/vicente/sandbox/lib/java/veloxdfs.jar</value>
-   -->
    <property>
      <name>yarn.application.classpath</name>
      <value>

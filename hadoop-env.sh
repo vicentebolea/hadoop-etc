@@ -33,9 +33,10 @@ fi
 # data transfer protocol using non-privileged ports.
 #export JSVC_HOME=${JSVC_HOME}
 
-export JAVA_LIBRARY_PATH=/home/vicente/sandbox/lib
-#export HADOOP_CONF_DIR=${HADOOP_CONF_DIR:-"/etc/hadoop"}
-export HADOOP_CONF_DIR=/home/vicente/hadoop-etc
+#export JAVA_LIBRARY_PATH=/home/vicente/sandbox/lib
+export JAVA_LIBRARY_PATH=${JAVA_LIBRARY_PATH:-"libs/native"}
+export HADOOP_CONF_DIR=${HADOOP_CONF_DIR:-"/etc/hadoop"}
+#export HADOOP_CONF_DIR=/home/vicente/hadoop-etc
 
 # Extra Java CLASSPATH elements.  Automatically insert capacity-scheduler.
 for f in $HADOOP_HOME/contrib/capacity-scheduler/*.jar; do
@@ -55,7 +56,7 @@ export HADOOP_HEAPSIZE=3000
 
 
 # Extra Java runtime options.  Empty by default.
-export HADOOP_OPTS="$HADOOP_OPTS -Djava.net.preferIPv4Stack=true -Djava.library.path=$HADOOP_HOME/lib/native:/home/vicente/sandbox/lib"
+export HADOOP_OPTS="$HADOOP_OPTS -Djava.net.preferIPv4Stack=true -Djava.library.path=$HADOOP_HOME/lib/native:$JAVA_LIBRARY_PATH"
 
 # Command specific options appended to HADOOP_OPTS when specified
 export HADOOP_NAMENODE_OPTS="-Dhadoop.security.logger=${HADOOP_SECURITY_LOGGER:-INFO,RFAS} -Dhdfs.audit.logger=${HDFS_AUDIT_LOGGER:-INFO,NullAppender} $HADOOP_NAMENODE_OPTS"
