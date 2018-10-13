@@ -54,7 +54,7 @@
 
    <property>
      <name>net.topology.script.file.name</name>
-     <value>/home/vicente/opt/hadoop-2.7.3/multi-rack.sh</value>
+     <value>/home/vicente/hadoop-etc/multi-rack.sh</value>
    </property>
 
 </configuration>

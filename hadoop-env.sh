@@ -14,6 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+source ~/.velox-env.sh
+
 # Set Hadoop-specific environment variables here.
 
 # The only required environment variable is JAVA_HOME.  All others are
@@ -22,10 +24,7 @@
 # remote nodes.
 
 # The java implementation to use.
-if [[ ! "$JAVA_HOME" ]]; then
-  export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.171-8.b10.el7_5.x86_64/jre
-fi
-#export PATH=${JAVA_HOME}/bin:${PATH}
+export JAVA_HOME=${JAVA_HOME}
 
 # The jsvc implementation to use. Jsvc is required to run secure datanodes
 # that bind to privileged ports to provide authentication of data transfer
@@ -33,10 +32,7 @@ fi
 # data transfer protocol using non-privileged ports.
 #export JSVC_HOME=${JSVC_HOME}
 
-#export JAVA_LIBRARY_PATH=/home/vicente/sandbox/lib
-export JAVA_LIBRARY_PATH=${JAVA_LIBRARY_PATH:-"libs/native"}
 export HADOOP_CONF_DIR=${HADOOP_CONF_DIR:-"/etc/hadoop"}
-#export HADOOP_CONF_DIR=/home/vicente/hadoop-etc
 
 # Extra Java CLASSPATH elements.  Automatically insert capacity-scheduler.
 for f in $HADOOP_HOME/contrib/capacity-scheduler/*.jar; do
@@ -46,8 +42,6 @@ for f in $HADOOP_HOME/contrib/capacity-scheduler/*.jar; do
     export HADOOP_CLASSPATH=$f
   fi
 done
-
-export HADOOP_CLASSPATH=$HADOOP_CLASSPATH:$HADOOP_CONF_DIR/velox-hadoop-1.0.jar:$HADOOP_CONF_DIR/veloxdfs.jar
 
 # The maximum amount of heap to use, in MB. Default is 1000.
 export HADOOP_HEAPSIZE=3000

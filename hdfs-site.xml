@@ -17,52 +17,52 @@
 <!-- Put site-specific property overrides in this file. -->
 
 <configuration>
-   <property> 
-      <name>dfs.data.dir</name> 
-      <value>file:///scratch/vicente/storage</value> 
-      <final>true</final> 
-   </property> 
+  <property> 
+    <name>dfs.data.dir</name> 
+    <value>file:///scratch/vicente/storage</value> 
+    <final>true</final> 
+  </property> 
 
-   <property> 
-      <name>dfs.name.dir</name> 
-      <value>file:///scratch/vicente/storage/name</value> 
-      <final>true</final> 
-   </property> 
+  <property> 
+    <name>dfs.name.dir</name> 
+    <value>file:///scratch/vicente/storage/name</value> 
+    <final>true</final> 
+  </property> 
 
-   <property> 
-      <name>dfs.namenode.http-address</name>
-      <value>192.168.0.100:54090</value>
-   </property>
+  <property> 
+    <name>dfs.namenode.http-address</name>
+    <value>192.168.0.100:54090</value>
+  </property>
 
-   <property> 
-      <name>dfs.namenode.https-address</name>
-      <value>192.168.0.100:54476</value>
-   </property>
+  <property> 
+    <name>dfs.namenode.https-address</name>
+    <value>192.168.0.100:54476</value>
+  </property>
 
-   <property> 
-      <name>dfs.namenode.servicerpc-address</name>
-      <value>192.168.0.100:54477</value>
-   </property>
+  <property> 
+    <name>dfs.namenode.servicerpc-address</name>
+    <value>192.168.0.100:54477</value>
+  </property>
 
-   <property> 
-      <name>dfs.namenode.secondary.http-address</name>
-      <value>192.168.0.100:54090</value>
-   </property>
+  <property> 
+    <name>dfs.namenode.secondary.http-address</name>
+    <value>192.168.0.100:54090</value>
+  </property>
 
-   <property> 
-      <name>dfs.namenode.secondary.https-address</name>
-      <value>192.168.0.100:54090</value>
-   </property>
+  <property> 
+    <name>dfs.namenode.secondary.https-address</name>
+    <value>192.168.0.100:54090</value>
+  </property>
 
-   <property>
-      <name>dfs.datanode.address</name>
-      <value>0.0.0.0:54010</value>
-   </property>
+  <property>
+    <name>dfs.datanode.address</name>
+    <value>0.0.0.0:54010</value>
+  </property>
 
-   <property>
-      <name>dfs.datanode.http.address</name> 
-      <value>0.0.0.0:54075</value>
-   </property>
+  <property>
+    <name>dfs.datanode.http.address</name> 
+    <value>0.0.0.0:54075</value>
+  </property>
 
   <property>
     <name>dfs.datanode.https.address</name>
@@ -74,8 +74,8 @@
     <value>0.0.0.0:54020</value>
   </property>
 
-   <property> 
-      <name>dfs.replication</name> 
-      <value>1</value> 
-   </property>
+  <property> 
+    <name>dfs.replication</name> 
+    <value>1</value> 
+  </property>
 </configuration>

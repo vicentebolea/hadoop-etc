@@ -35,24 +35,22 @@
 
    <property>
      <name>mapreduce.map.speculative</name>
-     <value>true</value>
+     <value>false</value>
    </property>
 
    <property>
      <name>mapred.child.java.opts</name>
-     <value>-Xmx256m</value>
+     <value>-Xmx512m</value>
    </property>
 
-   <!--
    <property>
-     <name>mapreduce.map.java.opts</name>
-     <value>-Xmx1000m</value>
+     <name>mapreduce.jobhistory.address</name>
+     <value>192.168.0.100:10020</value>
    </property>
-   -->
 
    <property>
      <name>mapreduce.map.memory.mb</name>
-     <value>512</value>
+     <value>1024</value>
    </property>
 
    <property>
@@ -92,7 +90,6 @@
      <name>mapreduce.application.classpath</name>
      <value>/home/vicente/sandbox/lib/java/json-simple-1.1.jar,/home/vicente/sandbox/lib/java/veloxdfs.jar</value>
    </property>
-   -->
    <property>
      <name>mapreduce.application.classpath</name>
      <value>
@@ -106,5 +103,6 @@
      <name>yarn.app.mapreduce.am.env</name>
      <value>LD_LIBRARY_PATH=$HADOOP_HOME/lib/native:/home/vicente/sandbox/lib</value>
    </property>
+   -->
 
 </configuration>

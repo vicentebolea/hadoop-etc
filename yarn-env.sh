@@ -87,11 +87,12 @@ fi
 # so that filenames w/ spaces are handled correctly in loops below
 IFS=
 
+export HADOOP_SCRATCH=$HADOOP_SCRATCH
 
 # default log directory & file
 if [ "$YARN_LOG_DIR" = "" ]; then
   #YARN_LOG_DIR="$HADOOP_YARN_HOME/logs"
-  YARN_LOG_DIR="$HADOOP_SCRATCH/yarn/logs"
+  YARN_LOG_DIR="/scratch/vicente/yarn/logs" # :TODO:
 fi
 if [ "$YARN_LOGFILE" = "" ]; then
   YARN_LOGFILE='yarn.log'
@@ -118,7 +119,8 @@ if [ "x$JAVA_LIBRARY_PATH" != "x" ]; then
   YARN_OPTS="$YARN_OPTS -Djava.library.path=$JAVA_LIBRARY_PATH"
 fi  
 
-YARN_OPTS="$YARN_OPTS -Djava.library.path=$JAVA_LIBRARY_PATH"
+#YARN_OPTS="$YARN_OPTS -Djava.library.path=$JAVA_LIBRARY_PATH"
+YARN_OPTS="$YARN_OPTS -Djava.library.path=/home/vicente/sandbox/lib/"
 YARN_OPTS="$YARN_OPTS -Dyarn.policy.file=$YARN_POLICYFILE"
 
 #source $HOME/VeloxDFS/set-env.sh &> /dev/null
