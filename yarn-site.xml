@@ -99,10 +99,12 @@
     <value>9</value>
   </property>
 
+  <!--
   <property>
     <name>yarn.scheduler.capacity.node-locality-delay</name>
-    <value>400</value>
+    <value>0</value>
   </property>
+-->
 
   <property>
     <name>yarn.application.classpath</name>

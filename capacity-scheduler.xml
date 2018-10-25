@@ -99,7 +99,7 @@
 
   <property>
     <name>yarn.scheduler.capacity.node-locality-delay</name>
-    <value>100000</value>
+    <value>1000</value>
     <description>
       Number of missed scheduling opportunities after which the CapacityScheduler 
       attempts to schedule rack-local containers. 
@@ -110,7 +110,7 @@
 
   <property>
     <name>yarn.scheduler.capacity.rack-locality-delay</name>
-    <value>10000</value>
+    <value>1000</value>
     <description>
       Number of missed scheduling opportunities after which the CapacityScheduler 
       attempts to schedule rack-local containers. 

@@ -17,6 +17,12 @@
 <!-- Put site-specific property overrides in this file. -->
 
 <configuration>
+  <!--
+   <property> 
+     <name>yarn.app.mapreduce.am.staging-dir</name>
+     <value>hdfs:///home/vicente/opt/hadoop-2.7.3/logs</value>
+   </property> 
+-->
 
    <property> 
       <name>mapred.job.tracker</name> 
@@ -46,6 +52,16 @@
    <property>
      <name>mapreduce.jobhistory.address</name>
      <value>192.168.0.100:10020</value>
+   </property>
+
+   <property>
+     <name>mapreduce.job.maps</name>
+     <value>8</value>
+   </property>
+
+   <property>
+     <name>mapreduce.job.reduce</name>
+     <value>1</value>
    </property>
 
    <property>
