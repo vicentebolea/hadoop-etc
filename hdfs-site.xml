@@ -25,53 +25,53 @@
 
   <property> 
     <name>dfs.name.dir</name> 
-    <value>file:///scratch/vicente/hadoop/name</value> 
+    <value>file:///scratch/vicente/hadoop/name,file:///backup/vicente/hdfs/name</value> 
     <final>true</final> 
   </property> 
 
   <property> 
     <name>dfs.namenode.http-address</name>
-    <value>192.168.0.100:54090</value>
+    <value>192.168.0.100:9060</value>
   </property>
 
   <property> 
     <name>dfs.namenode.https-address</name>
-    <value>192.168.0.100:54476</value>
+    <value>192.168.0.100:9061</value>
   </property>
 
   <property> 
     <name>dfs.namenode.servicerpc-address</name>
-    <value>192.168.0.100:54477</value>
+    <value>192.168.0.100:9062</value>
   </property>
 
   <property> 
     <name>dfs.namenode.secondary.http-address</name>
-    <value>192.168.0.100:54090</value>
+    <value>192.168.0.100:9063</value>
   </property>
 
   <property> 
     <name>dfs.namenode.secondary.https-address</name>
-    <value>192.168.0.100:54090</value>
+    <value>192.168.0.100:9064</value>
   </property>
 
   <property>
     <name>dfs.datanode.address</name>
-    <value>0.0.0.0:54010</value>
+    <value>0.0.0.0:9065</value>
   </property>
 
   <property>
     <name>dfs.datanode.http.address</name> 
-    <value>0.0.0.0:54075</value>
+    <value>0.0.0.0:9066</value>
   </property>
 
   <property>
     <name>dfs.datanode.https.address</name>
-    <value>0.0.0.0:54475</value>
+    <value>0.0.0.0:9067</value>
   </property>
 
   <property>
     <name>dfs.datanode.ipc.address</name>
-    <value>0.0.0.0:54020</value>
+    <value>0.0.0.0:9068</value>
   </property>
 
   <property> 

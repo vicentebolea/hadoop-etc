@@ -21,42 +21,42 @@
 
   <property>
     <name>yarn.nodemanager.webapp.address</name>
-    <value>0.0.0.0:8049</value>
+    <value>0.0.0.0:9140</value>
   </property>
 
   <property>
     <name>yarn.resourcemanager.resource-tracker.address</name>
-    <value>192.168.0.100:8041</value>
+    <value>192.168.0.100:9141</value>
   </property>
 
   <property>
     <name>yarn.resourcemanager.scheduler.address</name>
-    <value>192.168.0.100:8048</value>
+    <value>192.168.0.100:9142</value>
   </property>
 
   <property>
     <name>yarn.resourcemanager.address</name>
-    <value>192.168.0.100:8043</value>
+    <value>192.168.0.100:9143</value>
   </property>
 
   <property>
     <name>yarn.resourcemanager.webapp.address</name>
-    <value>192.168.0.100:8044</value>
+    <value>0.0.0.0:9144</value>
   </property>
 
   <property>
     <name>yarn.resourcemanager.webapp.https.address</name>
-    <value>192.168.0.100:8045</value>
+    <value>0.0.0.0:9145</value>
   </property>
 
   <property>
     <name>yarn.resourcemanager.admin.address</name>
-    <value>192.168.0.100:8046</value>
+    <value>192.168.0.100:9146</value>
   </property>
 
   <property>
     <name>yarn.nodemanager.localizer.address</name>
-    <value>0.0.0.0:8067</value>
+    <value>0.0.0.0:9147</value>
   </property>
 
   <property>
@@ -96,15 +96,8 @@
 
   <property>
     <name>yarn.nodemanager.resource.cpu-vcores</name>
-    <value>9</value>
+    <value>10</value>
   </property>
-
-  <!--
-  <property>
-    <name>yarn.scheduler.capacity.node-locality-delay</name>
-    <value>0</value>
-  </property>
--->
 
   <property>
     <name>yarn.application.classpath</name>
@@ -119,5 +112,9 @@
       ${HADOOP_YARN_HOME}/share/hadoop/yarn/*,
       ${HADOOP_YARN_HOME}/share/hadoop/yarn/lib/*
     </value>
+  </property>
+  <property>
+    <name>yarn.log-aggregation-enable</name>
+    <value>true</value>
   </property>
 </configuration>

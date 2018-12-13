@@ -23,11 +23,11 @@
    </property> 
    <property>
      <name>fs.AbstractFileSystem.velox.impl</name>
-     <value>org.apache.hadoop.fs.velox.VeloxFs</value>
+     <value>org.dicl.velox.fs.VeloxFs</value>
    </property>
    <property>
      <name>fs.velox.impl</name>
-     <value>org.apache.hadoop.fs.velox.VeloxFileSystem</value>
+     <value>org.dicl.velox.fs.VeloxFileSystem</value>
    </property>
    <property>
      <name>fs.root.dir</name>

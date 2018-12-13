@@ -7,6 +7,4 @@ OPTS+=" -D velox.profileToHDFS=false"
 OPTS+=" -D velox.numChunks=6401"
 OPTS+=" -D velox.input_threshold=$THRESHOLD"
 
-echo $OPTS
-
-time hadoop jar $LIBJARS LeanAggregateWordCount $OPTS -libjars $LIBJARS /text_100GB.dat /output.`date +%N`
+time hadoop jar $LIBJARS leanjoin $OPTS -libjars $LIBJARS /text_100GB.dat /output.`date +%N`

@@ -17,13 +17,6 @@
 <!-- Put site-specific property overrides in this file. -->
 
 <configuration>
-  <!--
-   <property> 
-     <name>yarn.app.mapreduce.am.staging-dir</name>
-     <value>hdfs:///home/vicente/opt/hadoop-2.7.3/logs</value>
-   </property> 
--->
-
    <property> 
       <name>mapred.job.tracker</name> 
       <value>192.168.0.100:9001</value> 
@@ -56,7 +49,7 @@
 
    <property>
      <name>mapreduce.job.maps</name>
-     <value>8</value>
+     <value>9</value>
    </property>
 
    <property>
@@ -79,46 +72,14 @@
      <value>-Xmx1024m</value>
    </property>
 
-   <property>
-      <!-- delay for non-local map tasks in ms -->
-     <name>mapred.fairscheduler.locality.delay</name>
-     <value>120000</value>
-   </property>
+  <property>
+    <name>mapreduce.job.counters.limit</name>
+    <value>1000</value>
+  </property>
 
-   <!--
-   <property>
-     <name>mapreduce.admin.user.env</name>
-     <value>LD_LIBRARY_PATH=$HADOOP_COMMON_HOME/lib/native:$HADOOP_CONF_DIR</value>
-   </property>
-
-   <property>
-     <name>yarn.app.mapreduce.am.admin-command-opts</name>
-     <value>LD_LIBRARY_PATH=$HADOOP_COMMON_HOME/lib/native:$HADOOP_CONF_DIR</value>
-   </property>
-
-
-   <property>
-     <name>yarn.app.mapreduce.am.staging-dir</name>
-     <value>file:///scratch/vicente/staging</value>
-   </property>
-
-   <property>
-     <name>mapreduce.application.classpath</name>
-     <value>/home/vicente/sandbox/lib/java/json-simple-1.1.jar,/home/vicente/sandbox/lib/java/veloxdfs.jar</value>
-   </property>
-   <property>
-     <name>mapreduce.application.classpath</name>
-     <value>
-      /home/vicente/sandbox/lib/java/*,
-      $HADOOP_MAPRED_HOME/share/hadoop/mapreduce/*,
-      $HADOOP_MAPRED_HOME/share/hadoop/mapreduce/lib/*
-     </value>
-   </property>
-
-   <property>
-     <name>yarn.app.mapreduce.am.env</name>
-     <value>LD_LIBRARY_PATH=$HADOOP_HOME/lib/native:/home/vicente/sandbox/lib</value>
-   </property>
-   -->
+  <property>
+    <name>mapreduce.job.counters.max</name>
+    <value>1000</value>
+  </property>
 
 </configuration>
