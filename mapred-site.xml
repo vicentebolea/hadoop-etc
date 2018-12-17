@@ -44,7 +44,17 @@
 
    <property>
      <name>mapreduce.jobhistory.address</name>
-     <value>192.168.0.100:10020</value>
+     <value>192.168.0.100:12020</value>
+   </property>
+
+   <property>
+     <name>mapreduce.jobhistory.webapp.address</name>
+     <value>10.20.19.65:17888</value>
+   </property>
+
+   <property>
+     <name>mapreduce.jobhistory.admin.address</name>
+     <value>192.168.0.100:10133</value>
    </property>
 
    <property>
